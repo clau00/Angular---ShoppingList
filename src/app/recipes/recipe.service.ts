@@ -12,7 +12,7 @@ export class RecipeService{
     new Recipe(
       'Pumpkin Pad Thai',
       'Test Description 1',
-      ' https://i1.wp.com/www.eatthis.com/wp-content/uploads/2019/10/pumpkin-pad-thai-recipe.jpg?resize=640%2C360&ssl=1',
+      'https://static01.nyt.com/images/2020/02/10/dining/mc-shakshuka/mc-shakshuka-articleLarge.jpg',
       [
         new Ingredient('Pumpkin', 1),
         new Ingredient('Chicken', 1)
@@ -32,6 +32,10 @@ export class RecipeService{
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  getRecipeById(index: number){
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
