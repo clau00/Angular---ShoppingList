@@ -9,24 +9,7 @@ import {Subject} from 'rxjs';
 export class RecipeService{
   onRecipesChanged = new Subject<Recipe[]>();
 
-  recipes: Recipe[] = [
-    new Recipe(
-      'Pumpkin Pad Thai',
-      'Test Description 1',
-      'https://static01.nyt.com/images/2020/02/10/dining/mc-shakshuka/mc-shakshuka-articleLarge.jpg',
-      [
-        new Ingredient('Pumpkin', 1),
-        new Ingredient('Chicken', 1)
-      ]),
-    new Recipe(
-      'Sauteed Zucchini',
-      'Description Test 2',
-      'https://www.inspiredtaste.net/wp-content/uploads/2018/12/Sauteed-Zucchini-Recipe-1-1200.jpg',
-      [
-        new Ingredient('Zucchini', 1),
-        new Ingredient('Beans', 15)
-      ]),
-  ];
+  recipes: Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {
   }
